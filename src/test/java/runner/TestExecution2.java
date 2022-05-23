@@ -29,9 +29,11 @@ import utility.Snapshot;
 			driver=setUp();
 			driver.get("https://www.urbanladder.com");
 			HomePage2 h=new HomePage2(driver);
+			snap=new Snapshot();
+		
 	       extent.createReport();
 			extent.createTest("home page 2");
-			snap=new Snapshot();
+		
 			extent.logPass("successfully launched");
 			h.hover();
 			Thread.sleep(3000);
@@ -52,14 +54,17 @@ import utility.Snapshot;
 			h.checkout();
 			Thread.sleep(3000);
 			h.addDetails();
+			snap.takeSnapshot(driver);
 			Thread.sleep(3000);
+			extent.logFail(path);
 			extent.endReport();
 			
 
 }
-	@AfterMethod
-	public void quite() {
+	@AfterClass
+	public void close() {
 		driver.close();
 	}
+	
 	}
 

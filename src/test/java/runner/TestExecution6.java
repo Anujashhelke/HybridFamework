@@ -31,7 +31,7 @@ import reusable.WebDriverHelper;
 				driver=setUp();
 				driver.get(read.getUrl());
 				StoresPageObject h=new StoresPageObject(driver);
-		       extent.createReport();
+		      extent.createReport();
 				extent.createTest("home page 6");
 				snap=new Snapshot();
 				extent.logPass("successfully launched");
@@ -47,12 +47,15 @@ import reusable.WebDriverHelper;
 				Thread.sleep(2000);
 				h.getTitle("Urban Ladder");
 				Thread.sleep(3000);
+				snap.takeSnapshot(driver);
+				extent.endReport();
 
 	}	
 		@AfterClass
-			public void close() {
-		driver.close();
-	}
+		public void close() {
+			driver.close();
+		}
+		
 		
 	
 

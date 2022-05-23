@@ -3,14 +3,36 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.TestExecution2">
+      <class name="runner.TestExecution7">
         <methods>
           <include name="basePageNavigation"/>
-          <include name="setUp"/>
-          <include name="quite"/>
-          <include name="close"/>
         </methods>
-      </class> <!-- runner.TestExecution2 -->
+      </class> <!-- runner.TestExecution7 -->
+      <class name="runner.TestExecution4">
+        <methods>
+          <include name="basePageNavigation"/>
+        </methods>
+      </class> <!-- runner.TestExecution4 -->
+      <class name="runner.TestExecution6">
+        <methods>
+          <include name="basePageNavigation"/>
+        </methods>
+      </class> <!-- runner.TestExecution6 -->
+      <class name="runner.TextExecution9">
+        <methods>
+          <include name="basePageNavigation"/>
+        </methods>
+      </class> <!-- runner.TextExecution9 -->
+      <class name="runner.TestExecution3">
+        <methods>
+          <include name="basePageNavigation"/>
+        </methods>
+      </class> <!-- runner.TestExecution3 -->
+      <class name="runner.TestExecution8">
+        <methods>
+          <include name="basePageNavigation"/>
+        </methods>
+      </class> <!-- runner.TestExecution8 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

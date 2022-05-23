@@ -46,13 +46,16 @@ import pageobject.GiftCollectionPageObject;
 				gift.insertDate();
 				Thread.sleep(3000);
 				gift.clickNext();
+				snap.takeSnapshot(driver);
 				Thread.sleep(3000);
 				gift.sendText("anuja","avni","avni@gmail.com","anuja@gmail.com","657657");
 				Thread.sleep(3000);
 				gift.clickConfirm();
+				extent.endReport();
      }
 		@AfterClass
 		public void close() {
 			driver.close();
 		}
+		
 		}

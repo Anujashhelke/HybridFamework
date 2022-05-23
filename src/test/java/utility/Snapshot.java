@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 public class Snapshot {
 	public String takeSnapshot(WebDriver driver) throws IOException {
 		TakesScreenshot sshot=(TakesScreenshot)driver;
-		String date=new SimpleDateFormat("MM-dd-yyyy").format(new Date()) ;
+		String date=new SimpleDateFormat("MM-dd-yyyy-HH-mm-ss").format(new Date()) ;
 		File src=sshot.getScreenshotAs(OutputType.FILE);
 		String timeStamp=System.getProperty("user.dir")+"./snapshot/snapshot"+date+".png";
 		File dest=new File(timeStamp);

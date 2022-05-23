@@ -49,6 +49,7 @@ import utility.ExtentReport;
 					//Thread.sleep(2000);
 					l.submit();
 					l.requiredField();
+					extent.endReport();
 					
 
 

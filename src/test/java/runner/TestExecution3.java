@@ -28,7 +28,7 @@ import utility.Snapshot;
 			driver=setUp();
 			driver.get(read.getUrl());
 			HomePage3 h=new HomePage3(driver);
-	       extent.createReport();
+	      extent.createReport();
 			extent.createTest("home page 3");
 			snap=new Snapshot();
 			extent.logPass("successfully launched");
@@ -40,11 +40,14 @@ import utility.Snapshot;
 			Thread.sleep(3000);
 			h.getUserResponse();
 			Thread.sleep(3000);
+			snap.takeSnapshot(driver);
+			extent.endReport();
 
 }
 	@AfterClass
 	public void close() {
 		driver.close();
 	}
+	
 	
 	}

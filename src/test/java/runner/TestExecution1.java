@@ -52,16 +52,17 @@ public class TestExecution1 extends BaseClass {
 		h.closePopup();
 		Thread.sleep(3000);
 		h.verifyProduct();
+		path=snap.takeSnapshot(driver);
 		extent.logPass(path);
 		//h.textContain();
 		extent.endReport();
 		
 	}
-	@AfterMethod
-	public void closeTest() {
-		close();
+	@AfterClass
+	public void close() {
 		driver.close();
 	}
+	
 	
 	}
 

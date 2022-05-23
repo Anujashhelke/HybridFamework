@@ -44,11 +44,12 @@ import pageobject.LoginPage;
 					     l.clickOnLink();
 					     Thread.sleep(2000);
 					     l.getText("Cancellations and Returns");
+					     extent.endReport();
 						
 
 
 				}
-				@AfterMethod
+				@AfterClass
 				public void close() {
 					driver.close();
 				}

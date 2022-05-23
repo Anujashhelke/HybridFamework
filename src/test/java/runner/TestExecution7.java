@@ -30,7 +30,7 @@ import pageobject.StoresPageObject;
 					driver=setUp();
 					driver.get(read.getUrl());
 					ProductDetailsPageObject h=new ProductDetailsPageObject (driver);
-			       extent.createReport();
+			      extent.createReport();
 					extent.createTest("home page 6");
 					snap=new Snapshot();
 					extent.logPass("successfully launched");
@@ -47,13 +47,14 @@ import pageobject.StoresPageObject;
 					Thread.sleep(2000);
 					h.textContains("Kyra Door Mat");
 					Thread.sleep(3000);
+					extent.endReport();
 
 		}	
-			@AfterClass
-				public void close() {
-			driver.close();
-		}
 			
+			@AfterClass
+			public void close() {
+				driver.close();
+			}	
 		
 
 

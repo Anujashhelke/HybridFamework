@@ -53,14 +53,16 @@ import pageobject.CarriersPageObject;
 						     l.entermail(data.get(0));
 						     Thread.sleep(2000);
 						     l.subscribe();
+						     extent.endReport();
 							
 
 
 					}
-				    @AfterClass
+					@AfterClass
 					public void close() {
-					driver.close();
+						driver.close();
 					}
+				 
 					
 
 
